@@ -701,13 +701,13 @@ NSString *loginViewControllerRotate = @"loginViewControllerRotate";
             if (section==0) {
                 n=0;
             } else if (section==1) {
-                n=1;
+                n=2; //Modified
             }
         } else {
             if (section==0) {
                 n=2;
             } else if (section==1) {
-                n=1;
+                n=2; //Modified
             }
         }
     } else {
@@ -715,7 +715,7 @@ NSString *loginViewControllerRotate = @"loginViewControllerRotate";
             if (section==0) {
                 n=1;
             } else if (section==1) {
-                n=1;
+                n=2; //Modified
             } else if (section==2) {
                 n=0;
             }
@@ -770,6 +770,10 @@ NSString *loginViewControllerRotate = @"loginViewControllerRotate";
                         self.urlTextField.text = self.auxUrlForReloadTable;
                         
                         break;
+                    case  1:
+                        cell =  [self configureCellToShowLinkByAccountCell:cell];
+                        
+                        break;
                         
                     default:
                         break;
@@ -815,6 +819,11 @@ NSString *loginViewControllerRotate = @"loginViewControllerRotate";
                         
                         break;
                         
+                    case  1:
+                        cell =  [self configureCellToShowLinkByAccountCell:cell];
+                        
+                        break;
+                        
                     default:
                         break;
                 }
@@ -823,6 +832,11 @@ NSString *loginViewControllerRotate = @"loginViewControllerRotate";
                 switch (indexPath.row) {
                     case 0:
                         cell = [self configureCellToLoginByAccountCell:cell];
+                        
+                        break;
+                        
+                    case  1:
+                        cell =  [self configureCellToShowLinkByAccountCell:cell];
                         
                         break;
                         
